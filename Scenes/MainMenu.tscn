@@ -1,0 +1,167 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Images/Buttons/Button5.png" type="Texture" id=2]
+[ext_resource path="res://Images/Buttons/ButtonDisabled.png" type="Texture" id=3]
+[ext_resource path="res://Images/Buttons/Button5Hover.png" type="Texture" id=4]
+[ext_resource path="res://Images/Backgrounds/BG2.jpg" type="Texture" id=5]
+[ext_resource path="res://Comic_Neue/ComicNeue-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Audio/buttonPress2.wav" type="AudioStream" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.375, 0.375 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Control" parent="."]
+margin_left = 619.195
+margin_top = 303.27
+margin_right = 659.195
+margin_bottom = 343.27
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="TextureButton" parent="Play"]
+margin_left = 172.245
+margin_top = 96.0631
+margin_right = 772.245
+margin_bottom = 396.063
+rect_scale = Vector2( 0.25, 0.2 )
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Play"]
+margin_left = 206.711
+margin_top = 115.545
+margin_right = 289.711
+margin_bottom = 134.545
+custom_fonts/font = SubResource( 1 )
+text = "PLAY GAME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="Control" parent="."]
+margin_left = 619.195
+margin_top = 346.44
+margin_right = 659.195
+margin_bottom = 386.44
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="TextureButton" parent="Settings"]
+margin_left = 172.245
+margin_top = 96.0631
+margin_right = 772.245
+margin_bottom = 396.063
+rect_scale = Vector2( 0.25, 0.2 )
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Settings"]
+margin_left = 207.998
+margin_top = 117.475
+margin_right = 290.998
+margin_bottom = 136.475
+custom_fonts/font = SubResource( 1 )
+text = "SETTINGS"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Control" parent="."]
+margin_left = 619.195
+margin_top = 391.208
+margin_right = 659.195
+margin_bottom = 431.208
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="TextureButton" parent="Credits"]
+margin_left = 172.245
+margin_top = 96.0631
+margin_right = 772.245
+margin_bottom = 396.063
+rect_scale = Vector2( 0.25, 0.2 )
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Credits"]
+margin_left = 207.998
+margin_top = 117.475
+margin_right = 290.998
+margin_bottom = 136.475
+custom_fonts/font = SubResource( 1 )
+text = "CREDITS"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Control" parent="."]
+margin_left = 619.195
+margin_top = 391.208
+margin_right = 659.195
+margin_bottom = 431.208
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="TextureButton" parent="Quit"]
+margin_left = 171.867
+margin_top = 144.32
+margin_right = 771.867
+margin_bottom = 444.32
+rect_scale = Vector2( 0.25, 0.2 )
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Quit"]
+margin_left = 207.998
+margin_top = 164.05
+margin_right = 290.998
+margin_bottom = 183.05
+custom_fonts/font = SubResource( 1 )
+text = "QUIT"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+volume_db = -15.0
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+[connection signal="pressed" from="Play/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Settings/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="Credits/Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="Quit/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="finished" from="BGM" to="." method="_on_BGM_finished"]

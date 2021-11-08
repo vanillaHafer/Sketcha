@@ -1,0 +1,362 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://Scripts/drawingTest.gd" type="Script" id=1]
+[ext_resource path="res://Comic_Neue/ComicNeue-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Images/DrawingTools/Border.png" type="Texture" id=3]
+[ext_resource path="res://Images/Buttons/Button4Hover.png" type="Texture" id=4]
+[ext_resource path="res://Images/DrawingTools/thick.png" type="Texture" id=5]
+[ext_resource path="res://Images/Buttons/ButtonDisabled.png" type="Texture" id=6]
+[ext_resource path="res://Images/Buttons/Button5Hover.png" type="Texture" id=7]
+[ext_resource path="res://Images/Buttons/Button5.png" type="Texture" id=8]
+[ext_resource path="res://Images/Misc/Timer.png" type="Texture" id=9]
+[ext_resource path="res://Images/DrawingTools/blackSquare.png" type="Texture" id=10]
+[ext_resource path="res://Images/DrawingTools/whiteSquare.png" type="Texture" id=11]
+[ext_resource path="res://Images/DrawingTools/blackCircle.png" type="Texture" id=12]
+[ext_resource path="res://Images/DrawingTools/thin.png" type="Texture" id=13]
+[ext_resource path="res://Images/Buttons/Button4.png" type="Texture" id=14]
+[ext_resource path="res://Audio/timeUp.wav" type="AudioStream" id=15]
+[ext_resource path="res://Audio/thirty.wav" type="AudioStream" id=16]
+[ext_resource path="res://Audio/timeOut.wav" type="AudioStream" id=17]
+[ext_resource path="res://Audio/Go!.wav" type="AudioStream" id=18]
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://Comic_Neue/ComicNeue-Bold.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 48
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 19
+font_data = ExtResource( 2 )
+
+[node name="drawingTest" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="wyd" type="Label" parent="."]
+visible = false
+modulate = Color( 0.376471, 1, 0.0705882, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 281.099
+margin_top = 215.786
+margin_right = 429.099
+margin_bottom = 234.786
+custom_fonts/font = SubResource( 1 )
+text = "What You're Drawing"
+
+[node name="character" type="Label" parent="."]
+modulate = Color( 0, 0.988235, 0.941176, 1 )
+margin_left = 713.249
+margin_top = 523.601
+margin_right = 1012.25
+margin_bottom = 542.601
+custom_fonts/font = SubResource( 3 )
+text = "Character"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="action" type="Label" parent="."]
+modulate = Color( 1, 0.937255, 0, 1 )
+margin_left = 721.266
+margin_top = 549.001
+margin_right = 1002.27
+margin_bottom = 568.001
+custom_fonts/font = SubResource( 3 )
+text = "action that can be very long"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="thinLine" type="TextureButton" parent="."]
+margin_left = 219.025
+margin_top = 524.825
+margin_right = 347.025
+margin_bottom = 556.825
+texture_normal = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="thickLine" type="TextureButton" parent="."]
+margin_left = 219.025
+margin_top = 562.022
+margin_right = 347.025
+margin_bottom = 594.022
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="blackSquare" type="TextureButton" parent="."]
+margin_left = 377.228
+margin_top = 530.084
+margin_right = 441.228
+margin_bottom = 594.084
+texture_normal = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="whiteSquare" type="TextureButton" parent="."]
+margin_left = 449.732
+margin_top = 530.292
+margin_right = 513.732
+margin_bottom = 594.292
+texture_normal = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="clearButton" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 17.0001
+margin_top = 248.494
+margin_right = 617.0
+margin_bottom = 548.494
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 7 )
+texture_disabled = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="clearLabel" type="Label" parent="."]
+margin_left = 551.779
+margin_top = 567.43
+margin_right = 627.779
+margin_bottom = 586.43
+custom_fonts/font = SubResource( 4 )
+text = "ERASE ALL"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="timer" type="TextureRect" parent="."]
+margin_left = 654.278
+margin_top = 500.571
+margin_right = 804.278
+margin_bottom = 650.571
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 9 )
+
+[node name="squareButton" type="TextureButton" parent="."]
+margin_left = 117.484
+margin_top = 527.394
+margin_right = 181.484
+margin_bottom = 591.394
+texture_normal = ExtResource( 10 )
+
+[node name="circleButton" type="TextureButton" parent="."]
+margin_left = 39.1146
+margin_top = 527.394
+margin_right = 103.115
+margin_bottom = 591.394
+texture_normal = ExtResource( 12 )
+
+[node name="Shape" type="Label" parent="."]
+margin_left = 85.8681
+margin_top = 504.558
+margin_right = 132.868
+margin_bottom = 523.558
+custom_fonts/font = SubResource( 5 )
+text = "SHAPE"
+
+[node name="Size" type="Label" parent="."]
+margin_left = 264.073
+margin_top = 505.0
+margin_right = 297.073
+margin_bottom = 524.0
+custom_fonts/font = SubResource( 5 )
+text = "SIZE"
+
+[node name="Color" type="Label" parent="."]
+margin_left = 422.281
+margin_top = 504.558
+margin_right = 469.281
+margin_bottom = 523.558
+custom_fonts/font = SubResource( 5 )
+text = "COLOR"
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color( 1, 1, 1, 0.811765 )
+margin_right = 1024.0
+margin_bottom = 487.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="startingTimer" type="Timer" parent="."]
+
+[node name="countdownLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -52.5
+margin_top = -67.5463
+margin_right = 52.5
+margin_bottom = -11.5463
+custom_fonts/font = SubResource( 6 )
+text = "3..."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="actualTimer" type="Timer" parent="."]
+
+[node name="timeRemaining" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 696.633
+margin_top = 546.944
+margin_right = 722.633
+margin_bottom = 565.944
+custom_fonts/font = SubResource( 7 )
+text = "120"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Return" type="TextureButton" parent="."]
+margin_left = 529.436
+margin_top = 503.463
+margin_right = 1129.44
+margin_bottom = 803.463
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 14 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="returnLabel" type="Label" parent="."]
+margin_left = 562.722
+margin_top = 523.66
+margin_right = 618.722
+margin_bottom = 542.66
+custom_fonts/font = SubResource( 4 )
+text = "RETURN"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+
+[node name="timeOut" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+
+[node name="TimeUp" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+
+[node name="Go" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+
+[node name="Warning" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+
+[node name="PopUp" type="Control" parent="."]
+margin_left = -29.0403
+margin_top = -5.85995
+margin_right = 10.9597
+margin_bottom = 34.14
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="PopUp"]
+modulate = Color( 0.317647, 0.988235, 0.92549, 1 )
+margin_left = 218.0
+margin_top = 87.0
+margin_right = 891.0
+margin_bottom = 524.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PopUp"]
+margin_left = 237.0
+margin_top = 172.115
+margin_right = 874.0
+margin_bottom = 427.115
+custom_fonts/mono_font = SubResource( 8 )
+custom_fonts/normal_font = SubResource( 9 )
+text = "The drawing functionality is currently a work in progress! 
+
+Unfortunately, There are only 2 brush colors, 2 brush shapes, and 2 brush 
+sizes to choose from.
+
+Also, try to go with slower brush strokes for a smoother experience.
+
+Thank you for trying out this beta feature! Please provide us with your feedback if you have any so we can fine tune this feature in future builds!"
+
+[node name="okay" type="Button" parent="PopUp"]
+margin_left = 514.041
+margin_top = 490.821
+margin_right = 558.041
+margin_bottom = 510.821
+text = "Okay"
+
+[node name="GoTimer" type="Timer" parent="."]
+one_shot = true
+[connection signal="pressed" from="thinLine" to="." method="_on_thinLine_pressed"]
+[connection signal="pressed" from="thickLine" to="." method="_on_thickLine_pressed"]
+[connection signal="pressed" from="blackSquare" to="." method="_on_blackSquare_pressed"]
+[connection signal="pressed" from="whiteSquare" to="." method="_on_whiteSquare_pressed"]
+[connection signal="pressed" from="clearButton" to="." method="_on_clearButton_pressed"]
+[connection signal="pressed" from="squareButton" to="." method="_on_squareButton_pressed"]
+[connection signal="pressed" from="circleButton" to="." method="_on_circleButton_pressed"]
+[connection signal="timeout" from="startingTimer" to="." method="_on_startingTimer_timeout"]
+[connection signal="timeout" from="actualTimer" to="." method="_on_actualTimer_timeout"]
+[connection signal="pressed" from="Return" to="." method="_on_Return_pressed"]
+[connection signal="finished" from="BGM" to="." method="_on_BGM_finished"]
+[connection signal="pressed" from="PopUp/okay" to="." method="_on_okay_pressed"]
+[connection signal="timeout" from="GoTimer" to="." method="_on_GoTimer_timeout"]

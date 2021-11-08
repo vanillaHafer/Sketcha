@@ -1,0 +1,654 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
+[ext_resource path="res://Audio/thirty.wav" type="AudioStream" id=2]
+[ext_resource path="res://Audio/timeUp.wav" type="AudioStream" id=3]
+[ext_resource path="res://Images/Buttons/Button5.png" type="Texture" id=4]
+[ext_resource path="res://Images/Buttons/Button5Hover.png" type="Texture" id=5]
+[ext_resource path="res://Images/Backgrounds/BG3.jpg" type="Texture" id=6]
+[ext_resource path="res://Comic_Neue/ComicNeue-Bold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Images/Misc/Timer.png" type="Texture" id=9]
+[ext_resource path="res://Audio/Go!.wav" type="AudioStream" id=12]
+[ext_resource path="res://Audio/timeOut.wav" type="AudioStream" id=13]
+[ext_resource path="res://Audio/buttonPress2.wav" type="AudioStream" id=14]
+[ext_resource path="res://Images/Buttons/Button4Hover.png" type="Texture" id=16]
+[ext_resource path="res://Images/Buttons/ButtonDisabled.png" type="Texture" id=17]
+[ext_resource path="res://Images/Buttons/Button4.png" type="Texture" id=18]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=4]
+outline_size = 1
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=9]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=10]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[node name="Game" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 0.523254
+margin_right = 2731.52
+margin_bottom = 1714.0
+rect_scale = Vector2( 0.375, 0.375 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Character" type="Control" parent="."]
+margin_left = 294.305
+margin_top = 155.637
+margin_right = 334.305
+margin_bottom = 195.637
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="characterLabel" type="Label" parent="Character"]
+margin_left = -67.0
+margin_top = -12.0
+margin_right = 51.0
+margin_bottom = 2.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "TEST"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="characterChooser" type="TextureButton" parent="Character"]
+margin_left = -37.1089
+margin_top = 11.1489
+margin_right = 562.891
+margin_bottom = 311.149
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 18 )
+texture_hover = ExtResource( 16 )
+texture_disabled = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="character" type="Label" parent="Character"]
+margin_left = 0.794891
+margin_top = 31.9782
+margin_right = 44.7949
+margin_bottom = 53.9782
+custom_fonts/font = SubResource( 1 )
+text = "STOP"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Action" type="Control" parent="."]
+margin_left = 707.737
+margin_top = 155.637
+margin_right = 747.737
+margin_bottom = 195.637
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="actionLabel" type="Label" parent="Action"]
+margin_left = -110.0
+margin_top = -12.0
+margin_right = 66.0
+margin_bottom = 2.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "TEST"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="actionChooser" type="TextureButton" parent="Action"]
+margin_left = -38.3132
+margin_top = 11.149
+margin_right = 561.687
+margin_bottom = 311.149
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 18 )
+texture_hover = ExtResource( 16 )
+texture_disabled = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="action" type="Label" parent="Action"]
+margin_left = -0.409851
+margin_top = 31.9782
+margin_right = 43.5901
+margin_bottom = 53.9782
+custom_fonts/font = SubResource( 1 )
+text = "STOP"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart" type="TextureButton" parent="."]
+margin_left = 383.722
+margin_top = 265.158
+margin_right = 983.722
+margin_bottom = 565.158
+rect_scale = Vector2( 0.25, 0.2 )
+disabled = true
+texture_normal = ExtResource( 18 )
+texture_hover = ExtResource( 16 )
+texture_disabled = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="restartLabel" type="Label" parent="."]
+margin_left = 420.874
+margin_top = 284.325
+margin_right = 497.874
+margin_bottom = 303.325
+custom_fonts/font = SubResource( 2 )
+text = "SCRAMBLE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Random" type="TextureButton" parent="."]
+margin_left = 498.656
+margin_top = 265.158
+margin_right = 1098.66
+margin_bottom = 565.158
+rect_scale = Vector2( 0.25, 0.2 )
+texture_normal = ExtResource( 18 )
+texture_hover = ExtResource( 16 )
+texture_disabled = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="randomText" type="Label" parent="."]
+margin_left = 543.917
+margin_top = 285.582
+margin_right = 604.917
+margin_bottom = 304.582
+custom_fonts/font = SubResource( 3 )
+text = "RANDOM"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Control" parent="."]
+margin_left = -20.3618
+margin_top = -59.063
+margin_right = 19.6382
+margin_bottom = -19.063
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RoundTimer" type="Timer" parent="Timer"]
+
+[node name="TextureRect" type="TextureRect" parent="Timer"]
+margin_left = 468.181
+margin_top = 470.203
+margin_right = 618.181
+margin_bottom = 620.203
+texture = ExtResource( 9 )
+
+[node name="timeRemaining" type="Label" parent="Timer"]
+margin_left = 520.474
+margin_top = 535.368
+margin_right = 560.474
+margin_bottom = 554.368
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "120"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerStart" type="TextureButton" parent="Timer"]
+margin_left = 311.462
+margin_top = 368.158
+margin_right = 911.462
+margin_bottom = 668.158
+rect_scale = Vector2( 0.28, 0.2 )
+disabled = true
+texture_normal = ExtResource( 18 )
+texture_hover = ExtResource( 16 )
+texture_disabled = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="startTimer" type="Label" parent="Timer"]
+margin_left = 347.847
+margin_top = 388.472
+margin_right = 441.847
+margin_bottom = 407.472
+custom_fonts/font = SubResource( 5 )
+text = "START TIMER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="resetClock" type="TextureButton" parent="Timer"]
+margin_left = 454.333
+margin_top = 368.158
+margin_right = 1054.33
+margin_bottom = 668.158
+rect_scale = Vector2( 0.28, 0.2 )
+disabled = true
+texture_normal = ExtResource( 18 )
+texture_hover = ExtResource( 16 )
+texture_disabled = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="resetClockLabel" type="Label" parent="Timer"]
+margin_left = 490.871
+margin_top = 388.901
+margin_right = 587.871
+margin_bottom = 407.901
+custom_fonts/font = SubResource( 6 )
+text = "RESET CLOCK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cancelClock" type="TextureButton" parent="Timer"]
+margin_left = 596.262
+margin_top = 368.158
+margin_right = 1196.26
+margin_bottom = 668.158
+rect_scale = Vector2( 0.28, 0.2 )
+disabled = true
+texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cancelClockLabel" type="Label" parent="Timer"]
+margin_left = 627.052
+margin_top = 386.852
+margin_right = 734.052
+margin_bottom = 405.852
+custom_fonts/font = SubResource( 6 )
+text = "CANCEL TIMER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="oneMinute" type="TextureButton" parent="Timer"]
+margin_left = 385.883
+margin_top = 417.821
+margin_right = 985.883
+margin_bottom = 717.821
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 18 )
+texture_hover = ExtResource( 16 )
+texture_disabled = ExtResource( 17 )
+
+[node name="Label" type="Label" parent="Timer"]
+margin_left = 423.556
+margin_top = 439.292
+margin_right = 463.556
+margin_bottom = 458.292
+custom_fonts/font = SubResource( 7 )
+text = "60"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="twoMinute" type="TextureButton" parent="Timer"]
+margin_left = 479.926
+margin_top = 417.821
+margin_right = 1079.93
+margin_bottom = 717.821
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 18 )
+texture_hover = ExtResource( 16 )
+texture_disabled = ExtResource( 17 )
+
+[node name="Label2" type="Label" parent="Timer"]
+margin_left = 517.683
+margin_top = 439.292
+margin_right = 557.683
+margin_bottom = 458.292
+custom_fonts/font = SubResource( 7 )
+text = "120"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="threeMinute" type="TextureButton" parent="Timer"]
+margin_left = 577.586
+margin_top = 417.821
+margin_right = 1177.59
+margin_bottom = 717.821
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 18 )
+texture_hover = ExtResource( 16 )
+texture_disabled = ExtResource( 17 )
+
+[node name="Label3" type="Label" parent="Timer"]
+margin_left = 615.63
+margin_top = 439.292
+margin_right = 655.63
+margin_bottom = 458.292
+custom_fonts/font = SubResource( 7 )
+text = "180"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Warning" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="TimeUp" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="PopUp" type="Control" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -10.8602
+margin_top = 3.76337
+margin_right = 29.1398
+margin_bottom = 43.7634
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="PopUp"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -359.0
+margin_top = -239.5
+margin_right = 359.0
+margin_bottom = 239.5
+
+[node name="WhiteText" type="RichTextLabel" parent="PopUp"]
+margin_left = -314.0
+margin_top = -209.0
+margin_right = 351.0
+margin_bottom = 205.0
+text = "                                                         Welcome to the Drawing Game!
+
+The whole point is to have fun! 
+There are no \"rules\" to the game!
+
+The idea is to have the computer randomly pick a character and an action for you to draw!
+
+We find this game to be the funniest when you pick a random combination for 2+ people to draw at the same time for 2 minutes. However, find whatever works best for your group!
+
+If you don't think you can draw a specific character or action very well, change it!! It's no fun to draw something you, well, won't have fun drawing!
+
+If you think you need a more specific timer, then use your phone as a timer, or get rid of it all together!
+
+
+Last thing to tell you;
+
+When there are 30 SECONDS REMAINING on the timer you will be notified. 
+That is your warning to put on any finishing touches!
+
+When there are 0 SECONDS REMAINING on the timer you will be notified.
+That is the official sound to put your pencils down and compare drawings!
+
+All in all, have fun! Thanks for giving this game a play! If you have any recommendations, comments, or concerns then please let me know!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="PopUp"]
+margin_left = -28.2592
+margin_top = 214.0
+margin_right = 73.7408
+margin_bottom = 234.0
+text = "Close Window"
+
+[node name="changeIt(Yellow)" type="Label" parent="PopUp"]
+margin_left = 136.911
+margin_top = -58.9612
+margin_right = 202.911
+margin_bottom = -44.9612
+custom_colors/font_color = Color( 1, 0.964706, 0, 1 )
+text = "change it!!"
+
+[node name="bellSound(Yellow)" type="Label" parent="PopUp"]
+visible = false
+margin_left = 125.076
+margin_top = 105.942
+margin_right = 192.076
+margin_bottom = 119.942
+custom_colors/font_color = Color( 1, 0.964706, 0, 1 )
+text = "bell sound"
+
+[node name="dogSound(Yellow)" type="Label" parent="PopUp"]
+visible = false
+anchor_top = -1.90735e-07
+anchor_bottom = -1.90735e-07
+margin_left = 132.805
+margin_top = 60.9921
+margin_right = 208.805
+margin_bottom = 74.9921
+custom_colors/font_color = Color( 1, 0.964706, 0, 1 )
+text = "dog howling"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2people(Cyan)" type="Label" parent="PopUp"]
+margin_left = 188.371
+margin_top = -103.571
+margin_right = 303.371
+margin_bottom = -89.5705
+custom_colors/font_color = Color( 0, 0.92549, 1, 1 )
+text = "2+ people to draw"
+
+[node name="2minutes(Cyan)" type="Label" parent="PopUp"]
+margin_left = -219.773
+margin_top = -89.2268
+margin_right = -104.773
+margin_bottom = -75.2268
+custom_colors/font_color = Color( 0, 0.92549, 1, 1 )
+text = "2 minutes"
+
+[node name="Beginning(Green)" type="Label" parent="PopUp"]
+margin_left = -314.192
+margin_top = -179.255
+margin_right = -93.1916
+margin_bottom = -148.255
+custom_colors/font_color = Color( 0.333333, 0.984314, 0.00392157, 1 )
+text = "The whole point is to have fun!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Beginning(Green)2" type="Label" parent="PopUp"]
+margin_left = -314.192
+margin_top = -163.809
+margin_right = -93.1916
+margin_bottom = -132.809
+custom_colors/font_color = Color( 0.333333, 0.984314, 0.00392157, 1 )
+text = "There are no \"rules\" to the game!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WhateverWorks(Green)" type="Label" parent="PopUp"]
+margin_left = -82.654
+margin_top = -89.2696
+margin_right = 173.346
+margin_bottom = -58.2696
+custom_colors/font_color = Color( 0.333333, 0.984314, 0.00392157, 1 )
+text = "find whatever works best for your group!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="30SecRem(Red)" type="Label" parent="PopUp"]
+margin_left = -210.815
+margin_top = 61.47
+margin_right = -50.8152
+margin_bottom = 75.47
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "30 SECONDS REMAINING"
+
+[node name="0SecRem(Red)" type="Label" parent="PopUp"]
+margin_left = -210.815
+margin_top = 105.703
+margin_right = -50.8152
+margin_bottom = 119.703
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "0 SECONDS REMAINING"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -192.475
+margin_top = -18.3737
+margin_right = 207.525
+margin_bottom = 121.626
+rect_min_size = Vector2( 400, 140 )
+dialog_text = "
+
+        Are you sure you want to return to the main menu?"
+
+[node name="exitButton" type="TextureButton" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -40.5296
+margin_top = 4.90019
+margin_right = 559.47
+margin_bottom = 304.9
+rect_scale = Vector2( 0.05, 0.12 )
+texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 993.408
+margin_top = 12.9474
+margin_right = 1033.41
+margin_bottom = 31.9474
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Go" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[node name="timeOut" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+
+[node name="buttonPress" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 14 )
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+volume_db = -15.0
+
+[node name="Draw" type="TextureButton" parent="."]
+margin_left = 782.132
+margin_top = 511.292
+margin_right = 1382.13
+margin_bottom = 811.292
+rect_scale = Vector2( 0.2, 0.2 )
+disabled = true
+texture_normal = ExtResource( 18 )
+texture_hover = ExtResource( 16 )
+texture_disabled = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sketch" type="Label" parent="."]
+margin_left = 817.612
+margin_top = 532.24
+margin_right = 867.612
+margin_bottom = 551.24
+custom_fonts/font = SubResource( 9 )
+text = "Sketch!"
+
+[node name="Beta" type="Label" parent="."]
+margin_left = 862.008
+margin_top = 510.0
+margin_right = 898.008
+margin_bottom = 529.0
+rect_rotation = 20.0
+custom_fonts/font = SubResource( 10 )
+text = "BETA"
+[connection signal="pressed" from="Character/characterChooser" to="." method="_on_characterChooser_pressed"]
+[connection signal="pressed" from="Action/actionChooser" to="." method="_on_actionChooser_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="Random" to="." method="_on_Random_pressed"]
+[connection signal="timeout" from="Timer/RoundTimer" to="." method="_on_RoundTimer_timeout"]
+[connection signal="pressed" from="Timer/TimerStart" to="." method="_on_TimerStart_pressed"]
+[connection signal="pressed" from="Timer/resetClock" to="." method="_on_resetClock_pressed"]
+[connection signal="pressed" from="Timer/cancelClock" to="." method="_on_cancelClock_pressed"]
+[connection signal="pressed" from="Timer/oneMinute" to="." method="_on_oneMinute_pressed"]
+[connection signal="pressed" from="Timer/twoMinute" to="." method="_on_twoMinute_pressed"]
+[connection signal="pressed" from="Timer/threeMinute" to="." method="_on_threeMinute_pressed"]
+[connection signal="finished" from="Warning" to="." method="_on_Warning_finished"]
+[connection signal="finished" from="TimeUp" to="." method="_on_TimeUp_finished"]
+[connection signal="pressed" from="PopUp/Button" to="." method="_on_Button_pressed"]
+[connection signal="confirmed" from="ConfirmationDialog" to="." method="_on_ConfirmationDialog_confirmed"]
+[connection signal="popup_hide" from="ConfirmationDialog" to="." method="_on_ConfirmationDialog_popup_hide"]
+[connection signal="pressed" from="exitButton" to="." method="_on_exitButton_pressed"]
+[connection signal="finished" from="BGM" to="." method="_on_BGM_finished"]
+[connection signal="pressed" from="Draw" to="." method="_on_Draw_pressed"]

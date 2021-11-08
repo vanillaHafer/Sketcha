@@ -1,0 +1,211 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Images/Backgrounds/BG3.jpg" type="Texture" id=1]
+[ext_resource path="res://Scripts/Credits.gd" type="Script" id=2]
+[ext_resource path="res://Comic_Neue/ComicNeue-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scenes/backButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Audio/buttonPress2.wav" type="AudioStream" id=6]
+
+
+
+
+
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="Credits" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.375, 0.375 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -62.0
+margin_top = -213.538
+margin_right = 62.0
+margin_bottom = -176.538
+custom_fonts/font = SubResource( 1 )
+text = "CREDITS"
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -385.164
+margin_top = -112.78
+margin_right = -261.164
+margin_bottom = -75.7799
+custom_fonts/font = SubResource( 1 )
+text = "Programming"
+
+[node name="Label6" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -360.455
+margin_top = -70.0
+margin_right = -259.455
+margin_bottom = -33.0
+custom_fonts/font = SubResource( 2 )
+text = "Craig Hafer"
+
+[node name="Label7" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -360.455
+margin_top = 22.2288
+margin_right = -259.455
+margin_bottom = 59.2288
+custom_fonts/font = SubResource( 2 )
+text = "Claire Hafer"
+
+[node name="Label11" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 156.754
+margin_top = 22.2288
+margin_right = 284.754
+margin_bottom = 59.2288
+custom_fonts/font = SubResource( 2 )
+text = "You"
+
+[node name="Label8" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -360.455
+margin_top = 117.056
+margin_right = -259.455
+margin_bottom = 154.056
+custom_fonts/font = SubResource( 2 )
+text = "John Bartmann, Komiku"
+
+[node name="Label9" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -360.455
+margin_top = 202.789
+margin_right = -259.455
+margin_bottom = 239.789
+custom_fonts/font = SubResource( 2 )
+text = "Craig Hafer, Claire Hafer"
+
+[node name="Label3" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -385.164
+margin_top = -21.8516
+margin_right = -197.164
+margin_bottom = 15.1484
+custom_fonts/font = SubResource( 1 )
+text = "Graphics"
+
+[node name="Label10" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 69.3063
+margin_top = -21.8516
+margin_right = 257.306
+margin_bottom = 15.1484
+custom_fonts/font = SubResource( 1 )
+text = "Special Thanks"
+
+[node name="Label12" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 93.7896
+margin_top = 76.0815
+margin_right = 298.79
+margin_bottom = 153.081
+custom_fonts/font = SubResource( 1 )
+text = "Thanks for 
+  playing!"
+
+[node name="Label4" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -385.164
+margin_top = 69.0768
+margin_right = -197.164
+margin_bottom = 106.077
+custom_fonts/font = SubResource( 1 )
+text = "Music"
+
+[node name="Label5" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -385.164
+margin_top = 158.708
+margin_right = -197.164
+margin_bottom = 195.708
+custom_fonts/font = SubResource( 1 )
+text = "SFX"
+
+[node name="backButton" parent="." instance=ExtResource( 4 )]
+
+[node name="Label13" type="Label" parent="."]
+margin_left = 52.0
+margin_top = 19.0
+margin_right = 92.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 3 )
+text = "<"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+[connection signal="finished" from="BGM" to="." method="_on_BGM_finished"]
+[connection signal="pressed" from="backButton" to="." method="_on_backButton_pressed"]

@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Comic_Neue/ComicNeue-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/characterChanger.gd" type="Script" id=2]
+[ext_resource path="res://Images/Buttons/Button4.png" type="Texture" id=3]
+
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/ButtonDisabled.png-5aaf5cc81330286211e0814451b5bc5e.stex"
+
+[sub_resource type="DynamicFont" id=2]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="characterChanger" type="TextureButton"]
+margin_right = 600.0
+margin_bottom = 300.0
+rect_scale = Vector2( 0.1, 0.1 )
+texture_normal = ExtResource( 3 )
+texture_disabled = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 107.713
+margin_top = 94.769
+margin_right = 248.713
+margin_bottom = 142.769
+rect_scale = Vector2( 2.8, 2.8 )
+custom_fonts/font = SubResource( 2 )
+text = "Stealing Something Valuable"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="." to="." method="_on_characterChanger_pressed"]
