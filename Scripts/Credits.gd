@@ -1,8 +1,8 @@
 extends Control
 
-###################
-#    Variables    #
-###################
+####################
+# Preloaded Assets #
+####################
 
 var song1 = preload("res://Audio/Song1.wav")
 var song2 = preload("res://Audio/Song2.wav")
